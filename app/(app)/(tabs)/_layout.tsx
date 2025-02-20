@@ -1,6 +1,6 @@
 import React from "react";
-import Icon from "@/components/shared/Icon";
 import { Tabs } from "expo-router";
+import Icon from "components/shared/Icon";
 
 export default function TabsLayout() {
   return (

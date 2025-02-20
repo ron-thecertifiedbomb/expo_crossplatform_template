@@ -1,5 +1,6 @@
+
 import { Text, type TextProps, StyleSheet } from "react-native";
-import { useThemeColor } from "@/hooks/useThemeColor";
+
 
 export type LabelProps = TextProps & {
   customTextStyle?: object;
@@ -17,12 +18,12 @@ const Label: React.FC<LabelProps> = ({
   text,
   ...rest
 }) => {
-  const color = useThemeColor({ light: lightColor, dark: darkColor }, "text");
+
 
   return (
     <Text
       style={[
-        { color },
+        { lightColor },
         type === "default" && styles.default,
         type === "title" && styles.title,
         type === "defaultSemiBold" && styles.defaultSemiBold,

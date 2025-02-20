@@ -1,9 +1,9 @@
-const js = require("@eslint/js");
-const tseslint = require("@typescript-eslint/eslint-plugin");
-const tsParser = require("@typescript-eslint/parser");
-const globals = require("globals");
+import js from "@eslint/js";
+import tseslint from "@typescript-eslint/eslint-plugin";
+import tsParser from "@typescript-eslint/parser";
+import globals from "globals";
 
-module.exports = [
+export default [
   js.configs.recommended, // Ensures best practices are enforced
   {
     files: ["**/*.{js,jsx,ts,tsx}"],
@@ -11,10 +11,12 @@ module.exports = [
       parser: tsParser, // ✅ Use TypeScript parser
       ecmaVersion: 2022,
       sourceType: "module",
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-      },
+      globals: Object.fromEntries(
+        Object.entries({
+          ...globals.browser,
+          ...globals.node,
+        }).map(([key, value]) => [key.trim(), value]) // Remove extra spaces
+      ),
     },
     plugins: {
       "@typescript-eslint": tseslint,

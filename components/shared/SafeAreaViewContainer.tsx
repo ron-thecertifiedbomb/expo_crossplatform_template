@@ -2,8 +2,8 @@ import React from "react";
 import { SafeAreaView, StyleSheet, ViewStyle } from "react-native";
 
 interface SafeContainerProps {
-  children: React.ReactNode; // Accept children as a prop
-  style?: ViewStyle; // Optional additional styles
+  children: React.ReactNode; 
+  style?: ViewStyle; 
 }
 
 const SafeContainer: React.FC<SafeContainerProps> = ({ children, style }) => {

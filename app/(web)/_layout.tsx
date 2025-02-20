@@ -1,5 +1,5 @@
 
-import AppHeader from "@/components/home/AppHeader";
+import AppHeader from "components/home/AppHeader";
 import { Slot } from "expo-router";
 import React from "react";
 
