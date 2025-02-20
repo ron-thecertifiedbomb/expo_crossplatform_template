@@ -1,21 +1,15 @@
+import { ThemedText } from "components/ThemedText";
+import { ThemedView } from "components/ThemedView";
+import React from "react";
 
-import Container from "components/shared/Container";
-import Label from "components/shared/Label";
-import { fonts } from "constants/Fonts";
-import { StyleSheet } from "react-native";
 
 const Settings = () => (
-  <Container>
+    <ThemedView style={{ flex: 1, alignItems: "center", justifyContent: 'center' }}>
+        <ThemedText type="subtitle">Settings</ThemedText>
+      </ThemedView>
   
-  </Container>
 );
 
-const styles = StyleSheet.create({
-  heading4: {
-    fontSize: 22,
-    fontFamily: "FS Albert-Regular",
-    lineHeight: fonts.heading.h4.lineHeight,
-  },
-});
+
 
 export default Settings;

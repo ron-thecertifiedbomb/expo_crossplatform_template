@@ -1,13 +1,16 @@
-import Container from "components/shared/Container";
-import Label from "components/shared/Label";
+
+import { ThemedView } from "components/ThemedView";
 import React from "react";
+import { ThemedText } from "components/ThemedText";
 
 
 const HomeScreen: React.FC = () => {
   return (
-    <Container>
-   
-    </Container>
+
+   <ThemedView style={{ padding: 20, alignItems: "center" }}>
+      <ThemedText type="subtitle" darkColor={'darkColor'}>Start Exploring</ThemedText>
+    </ThemedView>
+
   );
 };  
 
