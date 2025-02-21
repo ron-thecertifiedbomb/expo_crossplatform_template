@@ -26,14 +26,15 @@ const Clock = () => {
     return () => clearInterval(timerId);
   }, []);
 
-  const radius = 75;
+  const radius = 70;
 
   const getNumberPosition = (number: number) => {
-    const angle = ((number - 3.2) / 12) * (2 * Math.PI); 
-    const x = radius * Math.cos(angle) + 85;
-    const y = radius * Math.sin(angle) + 80;
+    const angle = ((number - 3.1) / 12) * (2 * Math.PI); // Adjusted for orientation
+    const x = radius * Math.cos(angle) + 85; // X remains the same
+    const y = radius * Math.sin(angle) + 80; // Y remains the same
     return { left: x, top: y };
   };
+  
 
   return (
     <ThemedView style={styles.clock}>
