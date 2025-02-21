@@ -8,16 +8,12 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-// Define types for the component props
-interface IconProps {
-  name: string;
-  size?: number;
-  color?: string;
-  type?: "AntDesign" | "Entypo" | "EvilIcons" | "Feather" | "FontAwesome" | "Ionicons" | "MaterialIcons" | "MaterialCommunityIcons";
-}
+import { IconProps } from "./types/types";
+import { useThemeColor } from "constants/context/ThemeContext";
 
-const Icon: React.FC<IconProps> = ({ name, size = 30, color = "#900", type = "AntDesign" }) => {
-  // Define the icon libraries mapping
+const Icon: React.FC<IconProps> = ({ name, size = 30, type = "AntDesign", style }) => {
+  const { colors } = useThemeColor();
+
   const iconLibraries = {
     AntDesign,
     Entypo,
@@ -29,7 +25,6 @@ const Icon: React.FC<IconProps> = ({ name, size = 30, color = "#900", type = "An
     MaterialCommunityIcons,
   };
 
-  // Choose the appropriate icon library
   const IconComponent = iconLibraries[type];
 
   if (!IconComponent) {
@@ -37,7 +32,14 @@ const Icon: React.FC<IconProps> = ({ name, size = 30, color = "#900", type = "An
     return null;
   }
 
-  return <IconComponent name={name} size={size} color={color} />;
+  return (
+    <IconComponent
+      name={name}
+      size={size}
+      color={colors.icon}
+      style={style} // ✅ Pass style as a prop
+    />
+  );
 };
 
 export default Icon;

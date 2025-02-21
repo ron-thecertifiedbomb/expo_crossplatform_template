@@ -5,10 +5,12 @@ import "react-native-reanimated";
 import React from "react";
 import { Slot } from "expo-router";
 import { View, Text } from "react-native"; // Import UI components for fallback
-
+import { ThemeProvider } from "constants/context/ThemeContext"; // Adjust path as needed
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
+
+
   const [loaded] = useFonts({
     SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
     "FS Albert-Bold": require("../assets/fonts/FSAlbert-Bold.otf"),
@@ -36,7 +38,9 @@ export default function RootLayout() {
 
   return (
     <Suspense fallback={<FallbackUI />}>
-      <Slot />
+      <ThemeProvider>
+        <Slot />
+      </ThemeProvider>
     </Suspense>
   );
 }

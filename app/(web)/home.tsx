@@ -1,17 +1,20 @@
-
-import { ThemedView } from "components/ThemedView";
-import React from "react";
+import ThemedSafeContainer from "components/shared/SafeAreaViewContainer";
+import { getCommonStyles } from "components/shared/Styles/Common/CommonStyle";
+import { getDeviceType } from "components/shared/utils/getDeviceType";
 import { ThemedText } from "components/ThemedText";
+import React from "react";
 
+const HomeScreen = () => {
+  const deviceType = getDeviceType();
+  const styles = getCommonStyles(deviceType);
 
-const HomeScreen: React.FC = () => {
+  console.log('isDektop', deviceType.isDesktop)
+
   return (
-
-   <ThemedView style={{ padding: 20, alignItems: "center" }}>
-      <ThemedText type="subtitle" darkColor={'darkColor'}>Start Exploring</ThemedText>
-    </ThemedView>
-
+    <ThemedSafeContainer style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+      <ThemedText text="Home" style={styles.text.default} />
+    </ThemedSafeContainer>
   );
-};  
+};
 
 export default HomeScreen;

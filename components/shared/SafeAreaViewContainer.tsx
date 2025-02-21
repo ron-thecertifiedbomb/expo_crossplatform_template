@@ -1,23 +1,18 @@
+import { useThemeColor } from "constants/context/ThemeContext";
 import React from "react";
-import { SafeAreaView, StyleSheet, ViewStyle } from "react-native";
+import { SafeAreaView, ViewStyle } from "react-native";
 
-interface SafeContainerProps {
+interface ThemedSafeContainerProps {
   children: React.ReactNode; 
   style?: ViewStyle; 
 }
 
-const SafeContainer: React.FC<SafeContainerProps> = ({ children, style }) => {
+const ThemedSafeContainer: React.FC<ThemedSafeContainerProps> = ({ children, style }) => {
+    const { colors } = useThemeColor();
+    const backgroundColor = colors.background;
   return (
-    <SafeAreaView style={[styles.container, style]}>{children}</SafeAreaView>
+    <SafeAreaView style={[ {backgroundColor}, style]}>{children}</SafeAreaView>
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 16,
-    backgroundColor: "#f5f5f5",
-  },
-});
-
-export default SafeContainer;
+export default ThemedSafeContainer;

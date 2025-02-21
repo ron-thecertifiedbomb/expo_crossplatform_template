@@ -1,16 +1,20 @@
-
+import ThemedSafeContainer from "components/shared/SafeAreaViewContainer";
+import { getCommonStyles } from "components/shared/Styles/Common/CommonStyle";
+import { getDeviceType } from "components/shared/utils/getDeviceType";
 import { ThemedText } from "components/ThemedText";
-import { ThemedView } from "components/ThemedView";
 import React from "react";
 
-const Home = () => (
-  
-    <ThemedView style={{ flex: 1, alignItems: "center", justifyContent: 'center' }}>
-       <ThemedText type="subtitle">Themed Text</ThemedText>
-     </ThemedView>
- 
+const HomeScreen = () => {
+  const deviceType = getDeviceType();
+  const styles = getCommonStyles(deviceType);
 
-);
+  console.log('isMobileApp', deviceType.isMobile)
 
+  return (
+    <ThemedSafeContainer style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+      <ThemedText text="Home" style={styles.text.default} />
+    </ThemedSafeContainer>
+  );
+};
 
-export default Home;
+export default HomeScreen;
