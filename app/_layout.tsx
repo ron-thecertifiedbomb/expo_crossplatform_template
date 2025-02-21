@@ -5,7 +5,8 @@ import "react-native-reanimated";
 import React from "react";
 import { Slot } from "expo-router";
 import { View, Text } from "react-native"; // Import UI components for fallback
-import { ThemeProvider } from "constants/context/ThemeContext"; // Adjust path as needed
+import { ThemeProvider } from "@/constants/context/ThemeContext";
+
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {

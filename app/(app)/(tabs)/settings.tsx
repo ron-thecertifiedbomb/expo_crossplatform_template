@@ -1,8 +1,8 @@
-import ThemedSafeContainer from "components/shared/SafeAreaViewContainer";
-import { getCommonStyles } from "components/shared/Styles/Common/CommonStyle";
-import { getDeviceType } from "components/shared/utils/getDeviceType";
-import { ThemedText } from "components/ThemedText";
-import React from "react";
+import ThemedSafeContainer from "@/components/shared/SafeAreaViewContainer";
+import { getCommonStyles } from "@/components/shared/Styles/Common/CommonStyle";
+import { getDeviceType } from "@/components/shared/utils/getDeviceType";
+import { ThemedText } from "@/components/ThemedText";
+
 
 const Settings = () => {
   const deviceType = getDeviceType();

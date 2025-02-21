@@ -1,5 +1,6 @@
+import { useThemeColor } from "@/constants/context/ThemeContext";
 import React from "react";
-import { useThemeColor } from "constants/context/ThemeContext";
+
 import { Text, TextStyle, StyleProp } from "react-native";
 
 interface ThemedTextProps {

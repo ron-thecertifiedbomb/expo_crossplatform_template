@@ -1,5 +1,7 @@
 import React, { createContext, useContext, useState } from "react";
-import { Colors } from "constants/Colors";
+import { Colors } from "../Colors";
+
+
 
 type Theme = "light" | "dark";
 

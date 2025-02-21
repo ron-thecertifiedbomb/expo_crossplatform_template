@@ -1,8 +1,8 @@
 import React from "react";
 import { Tabs } from "expo-router";
-import Icon from "components/shared/Icon/Icon";
-import { ThemeProvider, useThemeColor } from "constants/context/ThemeContext"; // Import ThemeProvider
-import { ThemedText } from "components/ThemedText";
+import { ThemeProvider, useThemeColor } from "@/constants/context/ThemeContext";
+import { ThemedText } from "@/components/ThemedText";
+import Icon from "@/components/shared/Icon/Icon";
 
 function TabsLayout() {
   const { colors } = useThemeColor(); 

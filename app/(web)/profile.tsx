@@ -1,5 +1,6 @@
-import Container from "components/shared/Container";
-import Label from "components/shared/Label";
+
+
+import Container from "@/components/shared/Container";
 import React from "react";
 
 const ProfileScreen: React.FC = () => {

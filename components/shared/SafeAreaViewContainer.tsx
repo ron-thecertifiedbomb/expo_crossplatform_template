@@ -1,4 +1,5 @@
-import { useThemeColor } from "constants/context/ThemeContext";
+
+import { useThemeColor } from "@/constants/context/ThemeContext";
 import React from "react";
 import { SafeAreaView, ViewStyle } from "react-native";
 

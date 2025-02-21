@@ -1,8 +1,9 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
-import { useThemeColor } from "constants/context/ThemeContext";
-import Icon from "components/shared/Icon/Icon";
-import { IconType } from "components/shared/Icon/types/types";
+import { IconType } from "../shared/Icon/types/types";
+import { useThemeColor } from "../hooks/useThemeColor";
+import Icon from "../shared/Icon/Icon";
+
 
 interface ThemedHeaderProps {
   title: string;

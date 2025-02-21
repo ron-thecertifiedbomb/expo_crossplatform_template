@@ -9,7 +9,8 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import { IconProps } from "./types/types";
-import { useThemeColor } from "constants/context/ThemeContext";
+import { useThemeColor } from "@/constants/context/ThemeContext";
+
 
 const Icon: React.FC<IconProps> = ({ name, size = 30, type = "AntDesign", style }) => {
   const { colors } = useThemeColor();

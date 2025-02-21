@@ -1,5 +1,6 @@
+import { useThemeColor } from "@/constants/context/ThemeContext";
 import React from "react";
-import { useThemeColor } from "constants/context/ThemeContext";
+
 import { View, type ViewProps } from "react-native";
 
 interface ThemedViewProps extends ViewProps {
