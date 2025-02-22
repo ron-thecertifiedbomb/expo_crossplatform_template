@@ -13,9 +13,9 @@ export function ThemedView({ style, children, ...props }: ThemedViewProps) {
 
   return (
     <View style={[{ backgroundColor }, style]} {...props}>
-      <View>
+  
       {children} 
-      </View>
+  
     </View>
   );
 }

@@ -23,7 +23,7 @@ function TabsLayout() {
           title: "Home",
           headerShown: false,
           tabBarLabel: ({ color }) => (
-            <ThemedText  style={{ color }} text={'Home'}/>
+            <ThemedText  style={{ color }} text={'Tic Tac Toe'}/>
           ),
           tabBarIcon: ({ color, size }) => (
             <Icon name="home" size={size} style={{ color }} type="AntDesign" />
@@ -36,7 +36,7 @@ function TabsLayout() {
           title: "Settings",
           headerShown: false,
           tabBarLabel: ({ color }) => (
-            <ThemedText  style={{ color }} text={'Settings'}/>
+            <ThemedText  style={{ color }} text={'Time'}/>
           ),
           tabBarIcon: ({ color, size }) => (
             <Icon name="settings-outline" size={size} style={{ color }} type="Ionicons" />

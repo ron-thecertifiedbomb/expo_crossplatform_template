@@ -1,22 +1,23 @@
 
 import ThemedSafeContainer from "@/components/shared/SafeAreaViewContainer";
 import { getCommonStyles } from "@/components/shared/Styles/Common/CommonStyle";
-import TicTacToe from "@/components/shared/TicTacToe/TicTacToe";
 import { getDeviceType } from "@/components/shared/utils/getDeviceType";
 import { ThemedText } from "@/components/ThemedText";
 import React from "react";
+import { getDate } from "../utils/getDate";
 
-const HomeScreen = () => {
+const Date = () => {
   const deviceType = getDeviceType();
   const styles = getCommonStyles(deviceType);
 
-  console.log('isMobile', deviceType.isMobile)
+
+
 
   return (
-    <ThemedSafeContainer style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-     <TicTacToe />
+    <ThemedSafeContainer>
+     <ThemedText style={styles.text.defaultSemiBold}text={`Today is ${getDate()}`}/>
     </ThemedSafeContainer>
   );
 };
 
-export default HomeScreen;
+export default Date;
